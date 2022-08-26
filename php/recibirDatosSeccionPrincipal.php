@@ -1,0 +1,19 @@
+<?php
+    session_start();
+    session_destroy();
+    $nombre=$_POST['nombre'];
+    $apellido=$_POST['apellido'];
+    $matricula=$_POST['matricula'];
+    $telefono=$_POST['telefono'];
+    $correo=$_POST['correo'];
+    $curso=$_POST['curso'];
+    session_start();
+    if (!isset($_SESSION['values'])) {
+        $_SESSION['values']['nombre']=$nombre;
+        $_SESSION['values']['apellido']=$apellido;
+        $_SESSION['values']['matricula']=$matricula;
+        $_SESSION['values']['telefono']=$telefono;
+        $_SESSION['values']['correo']=$correo;
+        $_SESSION['values']['curso']=$curso;
+    }
+?>
